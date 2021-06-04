@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,600;0,700;1,400&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  background: linear-gradient(0.25turn, #3f87a6, #d2d4d1, #f69d3c); }
+
+body {
+  font-family: "Poppins"; }
+
+.Draw-TriColor {
+  padding: 10px; }
+
+#TricolorSVG rect:nth-child(1) {
+  animation: wave-1 1s ease-in-out infinite; }
+
+#TricolorSVG rect:nth-child(3) {
+  animation: wave-3 1s ease-in-out infinite; }
+
+@keyframes wave-1 {
+  0%,
+  100% {
+    clip-path: polygon(0 0, 12% 14%, 38% 4%, 52% 9%, 75% 4%, 100% 18%, 100% 100%, 0 100%); }
+  50% {
+    clip-path: polygon(0 14%, 17% 4%, 40% 11%, 58% 17%, 78% 12%, 100% 0, 100% 100%, 0 100%); } }
+
+@keyframes wave-3 {
+  0%,
+  100% {
+    clip-path: polygon(0 88%, 22% 97%, 42% 93%, 64% 88%, 86% 90%, 100% 100%, 100% 0%, 0% 0%); }
+  50% {
+    clip-path: polygon(0 100%, 16% 94%, 28% 89%, 52% 90%, 68% 95%, 100% 90%, 100% 0%, 0% 0%); } }
+
+line {
+  stroke: #000080;
+  animation: animateLines 10s infinite alternate; }
+
+svg text {
+  fill: url(#linear);
+  stroke: #000000;
+  font-size: 68px;
+  letter-spacing: 1.2rem;
+  font-weight: 700;
+  stroke-width: 2;
+  animation: animateText 12s infinite alternate; }
+
+@keyframes animateText {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 40%; }
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: -40%; } }
+
+@keyframes animateLines {
+  0% {
+    stroke-dasharray: 0 2%;
+    stroke-dashoffset: 5%; }
+  100% {
+    stroke-dasharray: 5% 0;
+    stroke-dashoffset: -5%; } }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }

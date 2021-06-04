@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tricolor flag</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body onload="drawSpokes();">
+    <div class="Draw-TriColor">
+      <svg id="TricolorSVG" width="1440" height="1024">
+        <!-- Draw rects -->
+        <rect
+          class="layer-1"
+          x="50"
+          y="50"
+          width="450"
+          height="100"
+          style="fill: #ff9933"
+        />
+        <rect
+          class="layer-2"
+          x="50"
+          y="150"
+          width="450"
+          height="100"
+          style="fill: #ffffff"
+        />
+        <rect
+          class="layer-3"
+          x="50"
+          y="250"
+          width="450"
+          height="100"
+          style="fill: #138808"
+        />
+
+        <!-- Draw wheel -->
+        <circle cx="275" cy="200" style="stroke: #000080; fill: none" r="50" />
+
+        <!-- Draw Pole -->
+        <rect x="50" y="40" width="12" height="800" style="fill: #895e3f" />
+
+        <!-- Draw Stages -->
+        <rect
+          x="25"
+          y="840"
+          width="60"
+          height="20"
+          style="stroke: #000000; fill: lightyellow"
+        />
+
+        <rect
+          x="10"
+          y="860"
+          width="90"
+          height="20"
+          style="stroke: #000000; fill: lightgrey"
+        />
+
+        <rect
+          x="-0"
+          y="880"
+          width="110"
+          height="20"
+          style="stroke: #000000; fill: grey"
+        />
+
+        <!-- Fill text with linear Gradient -->
+        <defs>
+          <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#ff9933" />
+            <stop offset="60%" stop-color="#ffffff" />
+            <stop offset="100%" stop-color="#138808" />
+          </linearGradient>
+        </defs>
+        <!-- Text -->
+        <text x="100" , y="500" fill="transparent ">Happy Republic Day !</text>
+      </svg>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
