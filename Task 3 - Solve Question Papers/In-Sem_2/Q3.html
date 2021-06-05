@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 3</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Question 3</h1>
+    <script>
+      //    A
+      const power = (x, y = 2) => {
+        return Math.pow(x, y);
+      };
+      console.log(power(2, 3)); //  8
+      console.log(power(2)); //  4
+
+      //   B
+      console.log("15" + 1); //         151
+      console.log("15" - 1); //         14
+      console.log("five" * 2); //       NaN
+      console.log(NaN == NaN); //       False
+      console.log(10 > 20 || 15); //    15
+      console.log(8 * null); //         0
+
+      //    C
+
+      // In C 1st:
+      const map = Object.create(null);
+      console.log(map); // Empty Object
+
+      // In C 2nd:
+      const student = function (ID) {
+        this.ID = ID;
+      };
+
+      const daStudent = new student(202012079);
+      console.log(daStudent); // ID: 202012079
+
+      // In 3rd:
+      daStudent.speak = function () {
+        console.log("Syanpse was good");
+      };
+
+      daStudent.speak(); // Syanpse was good
+    </script>
+  </body>
+</html>
