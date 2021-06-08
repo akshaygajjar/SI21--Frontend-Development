@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 2 - A</title>
+  </head>
+  <body>
+    <p>Reminders...</p>
+    <input id="RText" />
+    <button onclick="AddReminder()">Add</button>
+    <ul id="AllRs"> </ul>
+    <script>
+      const AddReminder = () => {
+        // declare variables
+        const value = document.getElementById("RText").value;
+        const unorderList = document.getElementById("AllRs");
+        const listChild = document.createElement("li");
+
+        // implementation
+        listChild.textContent = value;
+        unorderList.appendChild(listChild);
+        document.getElementById("RText").value = "";
+      };
+    </script>
+  </body>
+</html>
