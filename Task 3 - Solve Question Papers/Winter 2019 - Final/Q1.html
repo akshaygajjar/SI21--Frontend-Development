@@ -23,30 +23,20 @@
 
       /* re-write the correct code here */
 
-      // First approach
-      function weekDayName(n) {
-        var shortNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-        return shortNames[n];
-      }
+      const weekDayName = (function () {
+        const shortNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        return function (n) {
+          return shortNames[n];
+        };
+      })();
       console.log(weekDayName(2));
 
-      function month31Name(n) {
-        var shortNames = ["Jan", "Mar", "May", "Jul", "Aug", "Oct", "Dec"];
-        return shortNames[n];
-      }
-      console.log(month31Name(2));
-
-      // Second approach
-      function weekDayName(n) {
-        let shortNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-        return shortNames[n];
-      }
-      console.log(weekDayName(2));
-
-      function month31Name(n) {
+      const month31Name = (function () {
         shortNames = ["Jan", "Mar", "May", "Jul", "Aug", "Oct", "Dec"];
-        return shortNames[n];
-      }
+        return function (n) {
+          return shortNames[n];
+        };
+      })();
       console.log(month31Name(2));
     </script>
   </body>
