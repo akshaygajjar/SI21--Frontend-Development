@@ -1,5 +1,5 @@
 import React from 'react';
-import './TodoList.css';
+import './TodoList.scss';
 
 interface TodoListProps {
   items: {
@@ -14,7 +14,7 @@ const TodoList: React.FunctionComponent<TodoListProps> = (props) => {
     <ul>
       {props.items.map((todo) => (
         <li key={todo.id}>
-          <span>{todo.text}</span>
+          <span className='Todo-Text'>{todo.text}</span>
           <button onClick={props.onDeleteTodo.bind(null, todo.id)}>
             DELETE
           </button>

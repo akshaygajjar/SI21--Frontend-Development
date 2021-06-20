@@ -1,0 +1,51 @@
+$primary-color: #50005a;
+$secondary-color: #6a0a77;
+
+form {
+  width: 90%;
+  max-width: 40rem;
+  margin: 2rem auto;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+}
+
+label,
+input {
+  display: block;
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  font: inherit;
+  border: 1px solid #ccc;
+  padding: 0.25rem;
+
+  &focus {
+    outline: none;
+    border-color: $primary-color;
+  }
+}
+
+button {
+  background: $primary-color;
+  border: 1px solid $primary-color;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+
+  &focus {
+    outline: none;
+  }
+
+  &hover,
+  &active {
+    background: $secondary-color;
+    border-color: $secondary-color;
+  }
+}
